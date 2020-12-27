@@ -44,8 +44,8 @@ body {
 }
 
 .wrapper {
-    width: 85%;
-    height: 75%;
+    width: 318px;
+    height: 500px;
     max-height: 500px;
     display: flex;
     flex-direction: column;
@@ -59,7 +59,11 @@ body {
 .top {
     width: 100%;
     height: 35%;
-    overflow: hidden;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: url(./images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 .mid {
@@ -110,9 +114,8 @@ body {
 }
 
 .iconBox {
-    width: 15%;
-    min-width: 38px;
-    min-height: 38px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     background-color: var(--color-light-grayish-blue);
     display: flex;
@@ -131,10 +134,8 @@ body {
 }
 
 .shareBox {
-    width: 100%;
-    min-width: 225px;
-    height: 30px;
-    padding: 2em;
+    width: 318px;
+    height: 80px;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 10px;
@@ -147,6 +148,7 @@ body {
     background-color: var(--color-very-dark-grayish-blue);
     position: absolute;
     top: 245px;
+    right: -24px;
 }
 
 .shareIconMobile {
@@ -160,6 +162,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.shareIconMobile:hover {
+    cursor: pointer;
 }
 
 .show {
@@ -195,7 +201,7 @@ body {
 }
 
 
-@media screen and (min-width: 440px) {
+@media screen and (min-width: 650px) {
     .wrapper {
         
         max-width: 700px;
@@ -208,6 +214,9 @@ body {
     .top {
         width: 50%;
         height: 100%;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
     }
     
 .itemPic {
@@ -260,6 +269,10 @@ body {
         height: 40%;
         transform: rotate(45deg);
     }
+    .shareIconMobile {
+        display: none;
+    }
+
     .show {
         display: flex;
     }
